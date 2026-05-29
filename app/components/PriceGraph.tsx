@@ -162,4 +162,3 @@ export default function PriceGraph({ ticker }: PriceGraphProps) {
     </div>
   );
 }
-Change advanced chart interval to 15 minutes
