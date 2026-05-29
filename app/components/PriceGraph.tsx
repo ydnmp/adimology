@@ -119,7 +119,7 @@ export default function PriceGraph({ ticker }: PriceGraphProps) {
           <button 
             className="tradingview-btn"
             onClick={() => {
-              const url = `https://www.tradingview.com/chart/acOC8yxo/?symbol=IDX_DLY%3A${ticker.toUpperCase()}`;
+              const url = `https://www.tradingview.com/chart/acOC8yxo/?symbol=IDX%3A${ticker.toUpperCase()}&interval=15`;
               window.open(url, 'TradingView', 'width=1200,height=800,menubar=no,toolbar=no,location=no,status=no,directories=no,resizable=yes,scrollbars=yes');
             }}
             style={{ padding: '6px 12px', fontSize: '0.7rem' }}
@@ -162,3 +162,4 @@ export default function PriceGraph({ ticker }: PriceGraphProps) {
     </div>
   );
 }
+Change advanced chart interval to 15 minutes
