@@ -47,7 +47,7 @@ export default function PriceGraph({ ticker }: PriceGraphProps) {
     const widgetConfig = {
       "autosize": true,
       "symbol": `IDX:${ticker.toUpperCase()}`,
-      "interval": "D",
+      "interval": "15",
       "timezone": "Asia/Jakarta",
       "theme": isLightTheme ? "light" : "dark",
       "style": "1",
