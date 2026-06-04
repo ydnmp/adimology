@@ -4,7 +4,7 @@ import { fetchEmitenInfo, fetchHistoricalSummary } from "@/lib/stockbit";
 
 const supabase = createClient(
 process.env.SUPABASE_URL!,
-process.env.SUPABASE_SERVICE_ROLE_KEY!
+process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_KEY!
 );
 
 function sleep(ms: number) {
@@ -105,12 +105,9 @@ for (const row of symbols || []) {
     results.push({
       symbol,
       status: "ok",
-      price: payload.price,
-      volume: payload.volume,
-      value: payload.value,
     });
 
-    await sleep(700);
+    await sleep(500);
   } catch (err: any) {
     results.push({
       symbol,
