@@ -28,7 +28,7 @@ const { data: symbols, error } = await supabase
 .eq("is_active", true)
 .order("symbol", { ascending: true });
 
-```
+
 if (error) {
   return NextResponse.json(
     {
@@ -123,7 +123,7 @@ return NextResponse.json({
   count: results.length,
   results,
 });
-```
+
 
 } catch (err: any) {
 return NextResponse.json(
